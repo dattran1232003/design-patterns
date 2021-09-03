@@ -3,6 +3,7 @@
  * Simulating Weather Station system with mutiple screens, when
  * one of three parameter (temp, humidity, presure) change,
  * all screens will be notified to updated.
+ * @author Quoc Dat Tran <dattran1232003@gmail.com>
  */
 
 interface Observer {
