@@ -18,4 +18,18 @@ export class Order {
   setState(newState: OrderState) {
     this.state = newState
   }
+
+  /** Make the methods easier to use */
+  confirm() {
+    this.state.confirm(this)
+  }
+  prepare() {
+    this.state.prepare(this)
+  }
+  ship() {
+    this.state.ship(this)
+  }
+  complete() {
+    this.state.complete(this)
+  }
 }
