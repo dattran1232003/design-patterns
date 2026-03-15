@@ -11,7 +11,7 @@ export class TextEditorControl {
 
   undoChange() {
     const command = this.history.pop()
-    if (!command) throw new Error('No change to undo')
+    if (!command) return
     command.undo()
   }
 }
