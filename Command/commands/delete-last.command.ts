@@ -1,3 +1,4 @@
+import { SerializedCommand } from '../serialize/command.registry'
 import { TextEditor } from '../text-editor'
 import { ICommand } from './command.interface'
 
@@ -24,5 +25,9 @@ export class DeleteLastCommand implements ICommand {
     // re-typing the removed substring from last delete command
     // not invoke type command to keep the isolation between commands
     this.editor.type(this.removedSubStr)
+  }
+
+  toSerialized(): SerializedCommand {
+    return { type: 'deleteLast', params: { n: this.n } }
   }
 }
